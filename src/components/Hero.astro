@@ -1,0 +1,77 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+  <!-- Animated grid background -->
+  <div class="absolute inset-0 bg-[linear-gradient(rgba(167,139,250,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(167,139,250,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" aria-hidden="true"></div>
+
+  <!-- Radial glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-dark/20 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <p class="hero-tag inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/30 bg-brand/5 text-brand text-sm mb-8 opacity-0">
+      <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+      Available for freelance & full-time
+    </p>
+
+    <h1 class="hero-title font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6 opacity-0">
+      Hi, I'm <em class="not-italic gradient-text">Shannon</em><br />
+      I build things<br />
+      for the web.
+    </h1>
+
+    <p class="hero-sub max-w-xl mx-auto text-lg text-slate-400 leading-relaxed mb-10 opacity-0">
+      Full-stack developer specialising in beautiful interfaces, fast back-ends,
+      and the small details that make users smile.
+    </p>
+
+    <div class="hero-ctas flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0">
+      <a
+        href="#projects"
+        class="px-7 py-3.5 rounded-full bg-brand text-white font-medium hover:bg-brand-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(167,139,250,0.4)] active:scale-95"
+      >
+        See my work
+      </a>
+      <a
+        href="#contact"
+        class="px-7 py-3.5 rounded-full border border-white/10 text-slate-300 font-medium hover:border-white/30 hover:text-white transition-all duration-300 active:scale-95"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="hero-scroll absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0">
+      <div class="flex flex-col items-center gap-2 text-slate-600 text-xs tracking-widest uppercase">
+        <span>Scroll</span>
+        <div class="w-px h-10 bg-gradient-to-b from-brand/50 to-transparent animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Staggered entrance animation on load
+  const items = [
+    { sel: '.hero-tag', delay: 200 },
+    { sel: '.hero-title', delay: 400 },
+    { sel: '.hero-sub', delay: 600 },
+    { sel: '.hero-ctas', delay: 800 },
+    { sel: '.hero-scroll', delay: 1200 },
+  ];
+
+  items.forEach(({ sel, delay }) => {
+    const el = document.querySelector(sel) as HTMLElement | null;
+    if (!el) return;
+    setTimeout(() => {
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.22,1,0.36,1), translate 0.7s cubic-bezier(0.22,1,0.36,1)';
+      el.style.translate = '0 0';
+      el.style.opacity = '1';
+    }, delay);
+  });
+
+  // Set initial translate
+  document.querySelectorAll<HTMLElement>('.hero-tag,.hero-title,.hero-sub,.hero-ctas').forEach(el => {
+    el.style.translate = '0 1.5rem';
+  });
+</script>

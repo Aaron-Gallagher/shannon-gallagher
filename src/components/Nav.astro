@@ -1,0 +1,95 @@
+---
+const links = [
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header
+  id="nav"
+  class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+>
+  <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a
+      href="#"
+      class="text-white font-display text-xl font-bold tracking-tight hover:text-brand transition-colors"
+    >
+      SG<span class="text-brand">.</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="text-sm text-slate-400 hover:text-white transition-colors relative group"
+          >
+            {link.label}
+            <span
+              class="absolute -bottom-0.5 left-0 w-0 h-px bg-brand transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href="#contact"
+      class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand/40 text-brand text-sm font-medium hover:bg-brand/10 transition-all duration-300"
+    >
+      Hire me
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden text-slate-400 hover:text-white transition-colors"
+      aria-label="Open menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden px-6 pb-5 border-t border-white/5 bg-surface/95 backdrop-blur-xl"
+  >
+    <ul class="flex flex-col gap-4 pt-4">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="text-slate-300 hover:text-white transition-colors">
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href="#contact" class="text-brand font-medium">Hire me</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('nav');
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  // Scroll shadow
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav?.classList.add('bg-surface/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+    } else {
+      nav?.classList.remove('bg-surface/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+    }
+  });
+
+  // Mobile toggle
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
