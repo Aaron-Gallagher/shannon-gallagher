@@ -26,6 +26,11 @@ const {
       rel="stylesheet"
     />
     <title>{title}</title>
+    <script is:inline>
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.classList.remove('dark');
+      else document.documentElement.classList.add('dark');
+    </script>
   </head>
   <body class="noise antialiased">
     <div id="blob" aria-hidden="true"></div>

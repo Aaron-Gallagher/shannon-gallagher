@@ -1,14 +1,23 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-brand: #a78bfa;
   --color-brand-light: #c4b5fd;
   --color-brand-dark: #7c3aed;
+  /* Light mode defaults */
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f7fd;
+  --color-surface-3: #f0eef9;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+
+/* Dark mode surface overrides */
+html.dark {
   --color-surface: #0f0f13;
   --color-surface-2: #16161d;
   --color-surface-3: #1e1e28;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
 }
 
 html {
@@ -17,9 +26,13 @@ html {
 
 body {
   background-color: var(--color-surface);
-  color: #e2e8f0;
+  color: #111827;
   font-family: var(--font-sans);
   overflow-x: hidden;
+}
+
+html.dark body {
+  color: #e2e8f0;
 }
 
 ::selection {
