@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+
+export const personalProject = {
+  title: 'BP Pulse',
+  description: "Introducing the concept of a sustainable house battery — EcoPower — to BP Pulse's existing product range.",
+  tags: ['Product Design', 'UX Research', 'New Product'],
+  gradient: 'from-green-500/20 to-blue-500/20',
+  accent: '#00a651',
+};
+---
+
+<Layout
+  title="BP Pulse — Shannon Gallagher"
+  description="New product — introducing the concept of a sustainable house battery to BP Pulse's existing ecosystem."
+>
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <a
+          href="/"
+          class="cs-back inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors mb-10 opacity-0"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back to work
+        </a>
+
+        <p class="cs-label text-sm font-semibold text-brand uppercase tracking-widest mb-5 opacity-0">BP Pulse</p>
+
+        <h1 class="cs-headline font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 dark:text-white leading-tight max-w-4xl opacity-0">
+          Designing a new product for a sustainable future.
+        </h1>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">Background</p>
+            <p class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Driving Net Zero.</p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              BP Pulse offers charging solutions for those who own electric cars, with a network of charging stations across the UK.
+            </p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              It offers various payment methods including subscriptions, contactless, through the app, and guest charging.
+            </p>
+          </div>
+          <div data-animate>
+            <img
+              src="/personal-projects/bp-pulse/bp-pulse-current-site.png"
+              alt="Current BP Pulse website"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10 object-cover object-top max-h-96"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Opportunity -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-4" data-animate>The Opportunity</p>
+        <p class="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white leading-snug max-w-3xl" data-animate>
+          Introduce the concept of a sustainable house battery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Competitor Analysis -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3" data-animate>Competitor Analysis</p>
+        <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-2" data-animate>Competitor analysis findings</p>
+        <p class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-12" data-animate>What did I find?</p>
+
+        <!-- Powerwall -->
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-16">
+          <div data-animate>
+            <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Tesla Powerwall</p>
+            <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 1</span> — User-friendly navigation directs the user directly to the product. Bold imagery immerses the user into the world of Tesla.</li>
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 2</span> — Brief, concise information paired with aesthetically pleasing imagery. Information is displayed clearly for the viewer to understand the features and benefits of the product.</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4" data-animate>
+            <img
+              src="/personal-projects/bp-pulse/competitor-powerwall-product.png"
+              alt="Tesla Powerwall hero page"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <img
+              src="/personal-projects/bp-pulse/competitor-powerwall-backup.png"
+              alt="Tesla Powerwall backup protection section"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+        </div>
+
+        <!-- Sonnen -->
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-16">
+          <div class="grid grid-cols-2 gap-4" data-animate>
+            <img
+              src="/personal-projects/bp-pulse/competitor-sonnen-hero.png"
+              alt="Sonnen — clean and affordable energy hero"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <img
+              src="/personal-projects/bp-pulse/competitor-sonnen-products.png"
+              alt="Sonnen — smart energy solutions and sonnenBatterie"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+          <div data-animate>
+            <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Sonnen</p>
+            <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 1</span> — Simple yet effective navigation system. Engaging visuals that complement the content, allowing the user to understand the company's branding.</li>
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 2</span> — User has alternative options best fitted to their lifestyle. Brief description of product information doesn't overcomplicate their research but provides enough to make an informed decision.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enphase Ensemble -->
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          <div data-animate>
+            <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Enphase Ensemble</p>
+            <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 1</span> — Visual tutorial on how the product works and the process the average homeowner would expect. Content regarding the battery's benefits and how the user can elevate their experience.</li>
+              <li><span class="font-medium text-gray-900 dark:text-white">Finding 2</span> — Advertisement for Enphase Ensemble's app allows customers to control and monitor their product. Provides the opportunity for customisation and personalisation, tailoring the content based on usage.</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4" data-animate>
+            <img
+              src="/personal-projects/bp-pulse/competitor-enphase-how-it-works.png"
+              alt="Enphase Ensemble — how the system works"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <img
+              src="/personal-projects/bp-pulse/competitor-enphase-app.png"
+              alt="Enphase app — the power of the sun at your fingertips"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- The Solution -->
+    <div class="max-w-6xl mx-auto px-6 pb-32">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3" data-animate>The Solution</p>
+        <p class="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white leading-snug max-w-3xl mb-10" data-animate>
+          How did I answer the opportunity?
+        </p>
+        <div data-animate>
+          <img
+            src="/personal-projects/bp-pulse/solution-ecopower-slide.png"
+            alt="EcoPower — BP Pulse sustainable house battery landing page design"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  function animateHero() {
+    const items = [
+      { sel: '.cs-back', delay: 100 },
+      { sel: '.cs-label', delay: 250 },
+      { sel: '.cs-headline', delay: 420 },
+    ];
+
+    items.forEach(({ sel, delay }) => {
+      const el = document.querySelector(sel) as HTMLElement | null;
+      if (!el) return;
+      el.style.translate = '0 1.5rem';
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.22,1,0.36,1), translate 0.7s cubic-bezier(0.22,1,0.36,1)';
+        el.style.translate = '0 0';
+        el.style.opacity = '1';
+      }, delay);
+    });
+  }
+
+  animateHero();
+  document.addEventListener('astro:page-load', animateHero);
+</script>

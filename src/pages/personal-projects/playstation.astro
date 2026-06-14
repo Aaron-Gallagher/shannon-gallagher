@@ -1,0 +1,396 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+
+export const personalProject = {
+  title: 'Sony PlayStation',
+  description: 'Combining the functionality of two separate websites for a seamless and connected e-commerce experience.',
+  tags: ['UX Research', 'E-Commerce', 'Competitor Analysis'],
+  gradient: 'from-blue-600/20 to-blue-400/20',
+  accent: '#003791',
+};
+---
+
+<Layout
+  title="Sony PlayStation — Shannon Gallagher"
+  description="Digital e-commerce transformation — combining two separate platforms into a seamless, connected experience."
+>
+  <Nav />
+
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <a
+          href="/"
+          class="cs-back inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors mb-10 opacity-0"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back to work
+        </a>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="cs-label text-sm font-semibold text-brand uppercase tracking-widest mb-5 opacity-0">Sony PlayStation</p>
+            <h1 class="cs-headline font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 dark:text-white leading-tight opacity-0">
+              Digital e-commerce transformation
+            </h1>
+          </div>
+          <div class="cs-img opacity-0">
+            <img
+              src="/personal-projects/playstation/ps-store-product.png"
+              alt="PlayStation Store product page"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Challenge — full-width background -->
+    <div class="relative w-full overflow-hidden" data-animate>
+      <img
+        src="/personal-projects/playstation/challenge-background.png"
+        alt="The challenge background"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- Site Audit -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">Site Audit</p>
+            <p class="text-lg font-semibold text-gray-900 dark:text-white mb-5">Understanding what currently exists</p>
+            <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-3">Key findings</p>
+            <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              <li>PlayStation and PlayStation Store function as two separate platforms.</li>
+              <li>Disconnected experience from main site to ecommerce- site</li>
+              <li>Basic e-commerce journey</li>
+              <li>Lacks opportunities to enhance the customer experience through additional items</li>
+              <li>Lack commercial opportunities to increase basket size through a guided e-commerce where customers can seamless purchase additional items</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-1 gap-4" data-animate>
+            <img
+              src="/personal-projects/playstation/ps-site-homepage.png"
+              alt="Current PlayStation.com"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <img
+              src="/personal-projects/playstation/ps-store-current.png"
+              alt="Current PlayStation Store"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Competitor Analysis -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3" data-animate>Competitor Analysis</p>
+        <p class="text-base font-semibold text-gray-900 dark:text-white mb-5" data-animate>Understand the competitive landscape</p>
+        <ul class="grid md:grid-cols-2 gap-x-12 gap-y-3 text-base text-slate-600 dark:text-slate-400 mb-10" data-animate>
+          <li>One website for everything</li>
+          <li>Guided e-commerce journey</li>
+          <li>Seamless ability to purchase add ons</li>
+          <li>Easy navigation structures and pathways</li>
+          <li>Concise and informative resources</li>
+          <li>Distinct brand identities based on colour schemes, design language, typography and layout.</li>
+        </ul>
+        <div data-animate>
+          <img
+            src="/personal-projects/playstation/competitor-analysis-overview.png"
+            alt="Competitor analysis overview — annotated FigJam board"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Competitor findings -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-2" data-animate>Competitor analysis findings</p>
+        <p class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-12" data-animate>The detail</p>
+
+        <!-- Meta Quest -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="space-y-6" data-animate>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 1</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Meta Quest</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">High-quality product showcasing. Option to expand the storage size and add on any accessories before the payment method.</p>
+            </div>
+            <img
+              src="/personal-projects/playstation/competitor-meta-quest-games.png"
+              alt="Meta Quest — browse games before purchase"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+          <div class="space-y-6" data-animate>
+            <img
+              src="/personal-projects/playstation/competitor-meta-quest-product.png"
+              alt="Meta Quest product page — storage and accessory selection"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 2</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Meta Quest</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Video advertising popular games. User is able to browse and add games before they commit to the payment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nintendo -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="space-y-6" data-animate>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 3</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Nintendo</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Detailed information regarding the specifications of the Nintendo Switch It doesn't include a price point in this section that's dedicated to Nintendo Switch.</p>
+            </div>
+            <img
+              src="/personal-projects/playstation/competitor-nintendo-store.png"
+              alt="My Nintendo Store purchase redirect"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+          <div class="space-y-6" data-animate>
+            <img
+              src="/personal-projects/playstation/competitor-nintendo-specs.png"
+              alt="Nintendo Switch specifications page"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 4</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Nintendo</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">In order to buy the product, you have to be redirected to My Nintendo Store. Opportunity to include Nintendo's accessories, such as cases, memory cards and controllers, underneath the option for purchase.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Xbox -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-6" data-animate>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 5</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Xbox</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Detailed information regarding the specifications of the Nintendo Switch It doesn't include a price point in this section that's dedicated to Nintendo Switch.</p>
+            </div>
+            <img
+              src="/personal-projects/playstation/competitor-xbox-product.png"
+              alt="Xbox Series S product page with bundle gallery"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+          <div class="space-y-6" data-animate>
+            <img
+              src="/personal-projects/playstation/competitor-xbox-checkout.png"
+              alt="Xbox checkout with people also buy"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+            <div>
+              <p class="text-xs font-semibold text-gray-500 dark:text-slate-500 uppercase tracking-widest mb-1">Finding 6</p>
+              <p class="text-xs font-semibold text-gray-900 dark:text-white uppercase tracking-widest mb-3">Xbox</p>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">In order to buy the product, you have to be redirected to My Nintendo Store. Opportunity to include Nintendo's accessories, such as cases, memory cards and controllers, underneath the option for purchase.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Best Practice -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3" data-animate>Best practice</p>
+        <p class="text-base font-semibold text-gray-900 dark:text-white mb-5" data-animate>Benchmarking Apple, Google, Amazon, ASOS…</p>
+        <p class="text-sm font-semibold text-gray-900 dark:text-white mb-3" data-animate>Industry leading</p>
+        <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 mb-10 max-w-2xl" data-animate>
+          <li>Interactive design elements elevate user experience by immersing them into the product.</li>
+          <li>E-Commerce efficiency - easy to navigate through detailed product information and specifications that allow users to make an informed decision.</li>
+          <li>Rich media and multimedia integration allow for a dynamic and visually appealing product display.</li>
+          <li>Visual hierarchy - effectively guides user's attention and prioritises relevant content.</li>
+        </ul>
+        <div class="grid grid-cols-2 gap-4" data-animate>
+          <img src="/personal-projects/playstation/benchmark-apple.png" alt="Apple — customise MacBook Air product page" class="w-full rounded-xl border border-gray-100 dark:border-white/10" />
+          <img src="/personal-projects/playstation/benchmark-asos.png" alt="ASOS homepage" class="w-full rounded-xl border border-gray-100 dark:border-white/10" />
+          <img src="/personal-projects/playstation/benchmark-amazon.png" alt="Amazon homepage" class="w-full rounded-xl border border-gray-100 dark:border-white/10" />
+          <img src="/personal-projects/playstation/benchmark-google.png" alt="Google — Pixel Tablet product page" class="w-full rounded-xl border border-gray-100 dark:border-white/10" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Design working out -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-8" data-animate>Design working out</p>
+        <div data-animate>
+          <img
+            src="/personal-projects/playstation/wireframes.jpg"
+            alt="Design working out — wireframe sketches"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- The Solution — full-width background -->
+    <div class="relative w-full overflow-hidden" data-animate>
+      <img
+        src="/personal-projects/playstation/solution-statement.png"
+        alt="The solution — how did I answer the challenge?"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- My Solution -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12">
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">My Approach</p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Through identifying pain points, i was able to develop a concept solution focused on improving the booking journey, information architecture, and usability. Restructuring meant addressing usability issues by streamlining the journey search and ticket selection process and improving information hierarchy,</p>
+          </div>
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">Accessory Customisation</p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Including extra straight after the product, creates a more seamless purchasing journey, adding compatible products at the point of selection rather than navigating through multiple pages. This aimed to simplify bundle creation and improve product discoverability.</p>
+          </div>
+        </div>
+        <div data-animate>
+          <img
+            src="/personal-projects/playstation/solution-mockups.png"
+            alt="PlayStation redesign — full solution overview: console browsing, game selection, accessories and payment screens"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- Payment Process -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12">
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">Payment Process</p>
+            <img
+              src="/personal-projects/playstation/solution-storage-upgrade.jpeg"
+              alt="Payment information page design"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">My Solution</p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">A seamless flow where users can go through the purchasing process without feeling any uncertainty. The consistency in layout, language, and design patterns reinforces the idea that the platform is reliable and secure.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-12" data-animate>
+          <img
+            src="/personal-projects/playstation/solution-basket.jpeg"
+            alt="PlayStation basket and checkout design"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+          <img
+            src="/personal-projects/playstation/solution-ps-plus.jpeg"
+            alt="PlayStation games store browse page"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+          />
+        </div>
+
+        <div class="md:text-right max-w-xl md:ml-auto" data-animate>
+          <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">With the payment process it's important for it to feel reliable, user-friendly, and thoughtfully designed. This encourages users to return and continue engaging with the service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-6xl mx-auto px-6">
+      <hr class="border-none h-px bg-gray-100 dark:bg-white/5" />
+    </div>
+
+    <!-- User Testing -->
+    <div class="max-w-6xl mx-auto px-6 pb-32">
+      <div class="py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          <div data-animate>
+            <p class="text-xs font-semibold text-brand uppercase tracking-widest mb-3">User testing</p>
+            <p class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-6">Validating the designs with users</p>
+            <p class="text-sm font-semibold text-gray-900 dark:text-white mb-3">What I would of done</p>
+            <ul class="space-y-3 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              <li>Formulate a discussion guide</li>
+              <li>Testing designs on regular users of PS products</li>
+              <li>Take note of participant's feedback</li>
+              <li>Amend designs based on feedback</li>
+            </ul>
+          </div>
+          <div data-animate>
+            <img
+              src="/personal-projects/playstation/user-testing.jpg"
+              alt="User testing session"
+              class="w-full rounded-xl border border-gray-100 dark:border-white/10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>
+
+<script>
+  function animateHero() {
+    const items = [
+      { sel: '.cs-back', delay: 100 },
+      { sel: '.cs-label', delay: 250 },
+      { sel: '.cs-headline', delay: 420 },
+      { sel: '.cs-img', delay: 500 },
+    ];
+
+    items.forEach(({ sel, delay }) => {
+      const el = document.querySelector(sel) as HTMLElement | null;
+      if (!el) return;
+      el.style.translate = '0 1.5rem';
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.22,1,0.36,1), translate 0.7s cubic-bezier(0.22,1,0.36,1)';
+        el.style.translate = '0 0';
+        el.style.opacity = '1';
+      }, delay);
+    });
+  }
+
+  animateHero();
+  document.addEventListener('astro:page-load', animateHero);
+</script>

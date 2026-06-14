@@ -9,11 +9,11 @@ const links = [
 
 <header
   id="nav"
-  class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+  class="fixed top-0 inset-x-0 z-50 bg-surface border-b border-gray-100 dark:border-white/5 shadow-[0_2px_16px_rgba(167,139,250,0.1)]"
 >
   <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
     <a
-      href="#"
+      href="/"
       class="text-gray-900 dark:text-white font-display text-xl font-bold tracking-tight hover:text-brand transition-colors"
     >
       SG<span class="text-brand">.</span>
@@ -112,15 +112,6 @@ const links = [
   const nav = document.getElementById('nav');
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
-
-  // Scroll shadow
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      nav?.classList.add('bg-surface/80', 'backdrop-blur-xl', 'border-b', 'border-gray-100', 'dark:border-white/5');
-    } else {
-      nav?.classList.remove('bg-surface/80', 'backdrop-blur-xl', 'border-b', 'border-gray-100', 'dark:border-white/5');
-    }
-  });
 
   // Mobile toggle
   btn?.addEventListener('click', () => {

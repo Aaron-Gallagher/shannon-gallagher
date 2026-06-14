@@ -1,0 +1,80 @@
+---
+interface PersonalProjectMeta {
+  title: string;
+  description: string;
+  tags: string[];
+  gradient: string;
+  accent: string;
+  featured?: boolean;
+}
+
+const modules = import.meta.glob<{ personalProject?: PersonalProjectMeta }>('../pages/personal-projects/*.astro', { eager: true });
+
+const projects = Object.entries(modules)
+  .filter((entry): entry is [string, { personalProject: PersonalProjectMeta }] => entry[1].personalProject != null)
+  .map(([path, mod]) => ({
+    ...mod.personalProject,
+    href: `/personal-projects/${path.split('/').pop()!.replace('.astro', '')}`,
+  }));
+---
+
+<section id="personal-projects" class="py-32">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 space-y-4">
+      <p class="text-brand text-sm font-medium tracking-widest uppercase" data-animate>Personal work</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white" data-animate>
+        Personal <em class="not-italic gradient-text">Projects</em>
+      </h2>
+      <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto" data-animate>
+        Side projects and personal explorations in design and creativity.
+      </p>
+    </div>
+
+    {projects.length === 0 ? (
+      <p class="text-center text-slate-500 dark:text-slate-500 text-sm">Personal projects coming soon.</p>
+    ) : (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <a
+            href={project.href}
+            class={`glow-card group relative bg-surface-3 rounded-2xl p-6 border border-gray-100 dark:border-white/5 flex flex-col gap-4 ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
+            data-animate
+          >
+            <!-- Top gradient bar -->
+            <div class={`absolute top-0 inset-x-0 h-px bg-gradient-to-r ${project.gradient} rounded-t-2xl`}></div>
+
+            <!-- Accent dot -->
+            <div
+              class="w-10 h-10 rounded-xl flex items-center justify-center"
+              style={`background: ${project.accent}18; border: 1px solid ${project.accent}30`}
+            >
+              <div class="w-3 h-3 rounded-full" style={`background: ${project.accent}`}></div>
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-2 group-hover:text-brand transition-colors">
+                {project.title}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{project.description}</p>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-gray-200 dark:border-white/5">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <!-- Arrow -->
+            <div class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-1 group-hover:translate-x-0">
+              <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
