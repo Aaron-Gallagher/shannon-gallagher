@@ -48,13 +48,15 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
         </div>
       </div>
 
-      <!-- MacBook mockup — absolute, right side, vertically centred, bleeds off-screen -->
-      <div class="cs-img absolute right-[-4%] top-1/2 -translate-y-1/2 w-[58%] z-10 opacity-0">
-        <img
-          src="/personal-projects/playstation/ps-hero-mockup.png"
-          alt="PlayStation Store product page"
-          class="w-full"
-        />
+      <!-- MacBook mockup — outer owns centring (translate), inner owns animation (separate translate) -->
+      <div class="absolute right-[-4%] top-1/2 -translate-y-1/2 w-[58%] z-10">
+        <div class="cs-img opacity-0">
+          <img
+            src="/personal-projects/playstation/ps-hero-mockup.png"
+            alt="PlayStation Store product page"
+            class="w-full"
+          />
+        </div>
       </div>
 
       <!-- Logo + text — vertically centred to the full section -->
