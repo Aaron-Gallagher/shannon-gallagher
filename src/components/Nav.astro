@@ -1,9 +1,8 @@
 ---
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Case Studies', href: '#case-studies' },
+  { label: 'Personal Projects', href: '#personal-projects' },
 ];
 ---
 
@@ -11,7 +10,7 @@ const links = [
   id="nav"
   class="fixed top-0 inset-x-0 z-50 bg-surface border-b border-gray-100 dark:border-white/5 shadow-[0_2px_16px_rgba(167,139,250,0.1)]"
 >
-  <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+  <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between relative">
     <a
       href="/"
       class="text-gray-900 dark:text-white font-display text-xl font-bold tracking-tight hover:text-brand transition-colors"
@@ -19,7 +18,7 @@ const links = [
       SG<span class="text-brand">.</span>
     </a>
 
-    <ul class="hidden md:flex items-center gap-8">
+    <ul class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
       {links.map((link) => (
         <li>
           <a
@@ -35,30 +34,6 @@ const links = [
       ))}
     </ul>
 
-    <div class="hidden md:flex items-center gap-3">
-      <button
-        id="theme-toggle"
-        class="w-9 h-9 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:border-brand/40 transition-all duration-300"
-        aria-label="Toggle theme"
-      >
-        <!-- Sun (shown in dark mode) -->
-        <svg id="icon-sun" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="4"/>
-          <path stroke-linecap="round" d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-        </svg>
-        <!-- Moon (shown in light mode) -->
-        <svg id="icon-moon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-      </button>
-
-      <a
-        href="#contact"
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand/40 text-brand text-sm font-medium hover:bg-brand/10 transition-all duration-300"
-      >
-        Hire me
-      </a>
-    </div>
 
     <!-- Mobile menu button -->
     <button
@@ -85,25 +60,6 @@ const links = [
           </a>
         </li>
       ))}
-      <li>
-        <a href="#contact" class="text-brand font-medium">Hire me</a>
-      </li>
-      <li>
-        <button
-          id="theme-toggle-mobile"
-          class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm"
-        >
-          <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="4"/>
-            <path stroke-linecap="round" d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-          <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-          </svg>
-          <span class="dark:hidden">Dark mode</span>
-          <span class="hidden dark:block">Light mode</span>
-        </button>
-      </li>
     </ul>
   </div>
 </header>
@@ -118,13 +74,4 @@ const links = [
     menu?.classList.toggle('hidden');
   });
 
-  // Theme toggle
-  function toggleTheme() {
-    const html = document.documentElement;
-    html.classList.toggle('dark');
-    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-  }
-
-  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
-  document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
 </script>

@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+
+export const caseStudy = {
+  title: 'Allianz',
+  description: 'Coming soon — a case study exploring customer experience improvements within the insurance sector.',
+  tags: ['UX Research', 'Service Design', 'Financial Services'],
+  gradient: 'from-blue-500/20 to-sky-400/20',
+  accent: '#003781',
+  comingSoon: true,
+  logo: '/logos/allianz.svg',
+};
+---
+
+<Layout
+  title="Allianz — Shannon Gallagher"
+  description="Coming soon."
+>
+  <Nav />
+  <main class="min-h-screen flex items-center justify-center px-6">
+    <div class="text-center space-y-4">
+      <p class="text-brand text-sm font-medium tracking-widest uppercase">Coming Soon</p>
+      <h1 class="font-display text-4xl font-bold text-gray-900 dark:text-white">Allianz</h1>
+      <p class="text-slate-500 dark:text-slate-400 max-w-md mx-auto">This case study is currently in progress. Check back soon.</p>
+      <a href="/" class="inline-flex items-center gap-2 mt-4 text-sm text-brand hover:underline">
+        ← Back to home
+      </a>
+    </div>
+  </main>
+</Layout>
