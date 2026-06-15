@@ -21,20 +21,37 @@ export const caseStudy = {
 
   <main>
     <!-- Hero -->
-    <section class="relative overflow-hidden" style="background: linear-gradient(290deg, rgb(20, 54, 124) 3.86%, rgb(36, 98, 226) 88.65%);">
-      <div class="max-w-6xl mx-auto px-6 pt-32 pb-0">
-        <a
-          href="/"
-          class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-12 opacity-0"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-          Back to work
-        </a>
+    <section class="relative min-h-[70vh] overflow-hidden" style="background: linear-gradient(290deg, rgb(20, 54, 124) 3.86%, rgb(36, 98, 226) 88.65%);">
+      <!-- Back link — absolute so it doesn't affect content centring -->
+      <div class="absolute top-8 inset-x-0 z-20">
+        <div class="max-w-6xl mx-auto px-6">
+          <a
+            href="/"
+            class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors opacity-0"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+            Back to work
+          </a>
+        </div>
+      </div>
 
-        <div class="grid md:grid-cols-[minmax(0,595fr)_minmax(0,713fr)] gap-8 items-start pb-16">
-          <div>
+      <!-- Dashboard mockup — outer owns centring (translate), inner owns animation (separate translate) -->
+      <div class="absolute right-[-100px] top-1/2 -translate-y-1/2 w-[58%] max-w-[720px] z-10">
+        <div class="cs-graph opacity-0">
+          <img
+            src="/case-studies/allianz/allianz-hero-dashboard.png"
+            alt="Allianz Global Investors fund dashboard"
+            class="w-full"
+          />
+        </div>
+      </div>
+
+      <!-- Logo + text — vertically centred to the full section -->
+      <div class="relative z-20 flex items-center min-h-[70vh]">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+          <div class="max-w-[48%]">
             <img
               src="/case-studies/allianz/allianz-logo-white.png"
               alt="Allianz Global Investors"
@@ -46,13 +63,6 @@ export const caseStudy = {
             <p class="cs-sub font-karla text-2xl font-light text-white/90 leading-[1.37] opacity-0">
               Helping investors understand what drives performance and compare investment opportunities.
             </p>
-          </div>
-          <div class="cs-graph opacity-0">
-            <img
-              src="/case-studies/allianz/allianz-hero-dashboard.png"
-              alt="Allianz Global Investors fund dashboard"
-              class="w-full"
-            />
           </div>
         </div>
       </div>
