@@ -33,19 +33,9 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
       class="relative min-h-[70vh] overflow-hidden"
       style="background-image: url('/personal-projects/playstation-hero-bg.png'); background-size: cover; background-position: center 30%;"
     >
-      <!-- MacBook mockup — absolute, right side, vertically centred, bleeds off-screen -->
-      <div class="cs-img absolute right-[-4%] top-1/2 -translate-y-1/2 w-[58%] z-10 opacity-0">
-        <img
-          src="/personal-projects/playstation/ps-hero-mockup.png"
-          alt="PlayStation Store product page"
-          class="w-full"
-        />
-      </div>
-
-      <!-- Left content in flow -->
-      <div class="relative z-20 flex flex-col min-h-[70vh]">
-        <!-- Back link -->
-        <div class="max-w-6xl mx-auto px-6 pt-8 w-full">
+      <!-- Back link — absolute so it doesn't affect content centring -->
+      <div class="absolute top-8 inset-x-0 z-20">
+        <div class="max-w-6xl mx-auto px-6">
           <a
             href="/"
             class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors opacity-0"
@@ -56,24 +46,33 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
             Back to work
           </a>
         </div>
+      </div>
 
-        <!-- Logo + text — vertically centred -->
-        <div class="flex-1 flex items-center">
-          <div class="max-w-6xl mx-auto px-6 w-full">
-            <div class="cs-label flex flex-col gap-20 max-w-[48%] opacity-0">
-              <img
-                src="/personal-projects/playstation/ps-logo-colour.png"
-                alt="PlayStation"
-                class="h-16 w-auto object-contain object-left"
-              />
-              <div class="flex flex-col gap-3">
-                <h1 class="font-karla text-[2.8rem] md:text-[3rem] font-normal leading-[1.15] text-white">
-                  One Console. Hundreds of Choices. One Clear Journey.
-                </h1>
-                <p class="font-karla text-2xl font-light text-white/90 leading-[1.37]">
-                  Simplifying how users explore, customise and purchase PlayStation products.
-                </p>
-              </div>
+      <!-- MacBook mockup — absolute, right side, vertically centred, bleeds off-screen -->
+      <div class="cs-img absolute right-[-4%] top-1/2 -translate-y-1/2 w-[58%] z-10 opacity-0">
+        <img
+          src="/personal-projects/playstation/ps-hero-mockup.png"
+          alt="PlayStation Store product page"
+          class="w-full"
+        />
+      </div>
+
+      <!-- Logo + text — vertically centred to the full section -->
+      <div class="relative z-20 flex items-center min-h-[70vh]">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+          <div class="cs-label flex flex-col gap-20 max-w-[48%] opacity-0">
+            <img
+              src="/personal-projects/playstation/ps-logo-colour.png"
+              alt="PlayStation"
+              class="h-16 w-auto object-contain object-left"
+            />
+            <div class="flex flex-col gap-3">
+              <h1 class="font-karla text-[2.8rem] md:text-[3rem] font-normal leading-[1.15] text-white">
+                One Console. Hundreds of Choices. One Clear Journey.
+              </h1>
+              <p class="font-karla text-2xl font-light text-white/90 leading-[1.37]">
+                Simplifying how users explore, customise and purchase PlayStation products.
+              </p>
             </div>
           </div>
         </div>
