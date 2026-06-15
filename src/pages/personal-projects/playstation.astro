@@ -30,49 +30,51 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
 
     <!-- Hero -->
     <section
-      class="relative min-h-[70vh] overflow-hidden flex flex-col"
+      class="relative min-h-[70vh] overflow-hidden"
       style="background-image: url('/personal-projects/playstation-hero-bg.png'); background-size: cover; background-position: center 30%;"
     >
-      <!-- Back link -->
-      <div class="relative z-10 max-w-6xl mx-auto px-6 pt-8 w-full">
-        <a
-          href="/"
-          class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors opacity-0"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-          Back to work
-        </a>
+      <!-- MacBook mockup — absolute, right side, vertically centred, bleeds off-screen -->
+      <div class="cs-img absolute right-[-4%] top-1/2 -translate-y-1/2 w-[58%] z-10 opacity-0">
+        <img
+          src="/personal-projects/playstation/ps-hero-mockup.png"
+          alt="PlayStation Store product page"
+          class="w-full"
+        />
       </div>
 
-      <!-- Content — vertically centred in remaining space -->
-      <div class="relative z-10 flex-1 flex items-center">
-        <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center py-8">
-          <!-- Left: logo → gap → headline + subtitle -->
-          <div class="cs-label flex flex-col gap-20 opacity-0">
-            <img
-              src="/personal-projects/playstation/ps-logo-colour.png"
-              alt="PlayStation"
-              class="h-16 w-auto object-contain object-left"
-            />
-            <div class="flex flex-col gap-3">
-              <h1 class="cs-headline font-karla text-[2.8rem] md:text-[3rem] font-normal leading-[1.15] text-white">
-                One Console. Hundreds of Choices. One Clear Journey.
-              </h1>
-              <p class="cs-sub font-karla text-2xl font-light text-white/90 leading-[1.37]">
-                Simplifying how users explore, customise and purchase PlayStation products.
-              </p>
-            </div>
-          </div>
+      <!-- Left content in flow -->
+      <div class="relative z-20 flex flex-col min-h-[70vh]">
+        <!-- Back link -->
+        <div class="max-w-6xl mx-auto px-6 pt-8 w-full">
+          <a
+            href="/"
+            class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors opacity-0"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+            Back to work
+          </a>
+        </div>
 
-          <!-- Right: MacBook mockup -->
-          <div class="cs-img opacity-0">
-            <img
-              src="/personal-projects/playstation/ps-hero-mockup.png"
-              alt="PlayStation Store product page"
-              class="w-full"
-            />
+        <!-- Logo + text — vertically centred -->
+        <div class="flex-1 flex items-center">
+          <div class="max-w-6xl mx-auto px-6 w-full">
+            <div class="cs-label flex flex-col gap-20 max-w-[48%] opacity-0">
+              <img
+                src="/personal-projects/playstation/ps-logo-colour.png"
+                alt="PlayStation"
+                class="h-16 w-auto object-contain object-left"
+              />
+              <div class="flex flex-col gap-3">
+                <h1 class="font-karla text-[2.8rem] md:text-[3rem] font-normal leading-[1.15] text-white">
+                  One Console. Hundreds of Choices. One Clear Journey.
+                </h1>
+                <p class="font-karla text-2xl font-light text-white/90 leading-[1.37]">
+                  Simplifying how users explore, customise and purchase PlayStation products.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
