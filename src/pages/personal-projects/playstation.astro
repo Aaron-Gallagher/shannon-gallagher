@@ -29,11 +29,17 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
   <main class="font-karla">
 
     <!-- Hero -->
-    <section class="pt-28 pb-12">
-      <div class="max-w-6xl mx-auto px-6">
+    <section
+      class="relative min-h-[60vh] flex items-end overflow-hidden"
+      style="background-image: url('/personal-projects/playstation-hero-bg.png'); background-size: cover; background-position: center 30%;"
+    >
+      <!-- Dark gradient overlay so text is readable -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-16 w-full">
         <a
           href="/"
-          class="cs-back inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors mb-8 opacity-0"
+          class="cs-back inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors mb-10 opacity-0"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
@@ -43,36 +49,22 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
 
         <div class="cs-label flex items-center gap-4 mb-4 opacity-0">
           <img src={imgPsLogo} alt="PlayStation logo" class="h-14 w-auto" />
-          <p class="text-xl font-semibold text-gray-900 dark:text-white">Sony PlayStation</p>
+          <p class="text-xl font-semibold text-white">Sony PlayStation</p>
         </div>
 
-        <h1 class="cs-headline text-4xl md:text-5xl font-normal leading-[1.37] text-gray-900 dark:text-white mb-10 opacity-0">
+        <h1 class="cs-headline text-4xl md:text-5xl font-normal leading-[1.37] text-white mb-0 opacity-0">
           Digital e-commerce transformation
         </h1>
-
-        <div class="cs-img opacity-0">
-          <img
-            src="/personal-projects/playstation/ps-store-product.png"
-            alt="PlayStation Store product page"
-            class="w-full max-w-3xl mx-auto block"
-          />
-        </div>
       </div>
     </section>
 
-    <!-- The Challenge — full-width with text overlay -->
-    <div class="relative w-full overflow-hidden" data-animate>
+    <!-- The Challenge -->
+    <div class="w-full overflow-hidden" data-animate>
       <img
         src="/personal-projects/playstation/challenge-background.png"
-        alt=""
+        alt="The challenge — combining two separate websites into a seamless connected experience"
         class="w-full object-cover"
       />
-      <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-20">
-        <p class="text-2xl md:text-[2rem] font-semibold text-white mb-6">The challenge</p>
-        <p class="text-lg md:text-2xl font-normal text-white leading-[1.37] max-w-2xl mx-auto text-center">
-          Combining the functionality of two separate websites for a seamless and connected experience to enhance the e-commerce journey.
-        </p>
-      </div>
     </div>
 
     <!-- Site Audit -->
@@ -387,7 +379,6 @@ const imgBasketBottom = "/personal-projects/playstation/solution-basket-bottom.p
       { sel: '.cs-back', delay: 100 },
       { sel: '.cs-label', delay: 250 },
       { sel: '.cs-headline', delay: 420 },
-      { sel: '.cs-img', delay: 500 },
     ];
 
     items.forEach(({ sel, delay }) => {
