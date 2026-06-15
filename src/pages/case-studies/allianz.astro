@@ -4,28 +4,241 @@ import Nav from '../../components/Nav.astro';
 
 export const caseStudy = {
   title: 'Allianz',
-  description: 'Coming soon — a case study exploring customer experience improvements within the insurance sector.',
+  description: 'Helping investors understand what drives performance and compare investment opportunities.',
   tags: ['UX Research', 'Service Design', 'Financial Services'],
   gradient: 'from-blue-500/20 to-sky-400/20',
   accent: '#003781',
-  comingSoon: true,
+  comingSoon: false,
   logo: '/logos/allianz.svg',
 };
 ---
 
 <Layout
   title="Allianz — Shannon Gallagher"
-  description="Coming soon."
+  description="Helping investors understand what drives performance and compare investment opportunities."
 >
   <Nav />
-  <main class="min-h-screen flex items-center justify-center px-6">
-    <div class="text-center space-y-4">
-      <p class="text-brand text-sm font-medium tracking-widest uppercase">Coming Soon</p>
-      <h1 class="font-display text-4xl font-bold text-gray-900 dark:text-white">Allianz</h1>
-      <p class="text-slate-500 dark:text-slate-400 max-w-md mx-auto">This case study is currently in progress. Check back soon.</p>
-      <a href="/" class="inline-flex items-center gap-2 mt-4 text-sm text-brand hover:underline">
-        ← Back to home
-      </a>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden" style="background: linear-gradient(290deg, rgb(20, 54, 124) 3.86%, rgb(36, 98, 226) 88.65%);">
+      <div class="max-w-6xl mx-auto px-6 pt-32 pb-0">
+        <a
+          href="/"
+          class="cs-back inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-12 opacity-0"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back to work
+        </a>
+
+        <div class="grid md:grid-cols-2 gap-12 items-end">
+          <div class="pb-16">
+            <img
+              src="/case-studies/allianz/allianz-logo.png"
+              alt="Allianz"
+              class="cs-logo h-10 mb-12 opacity-0"
+            />
+            <h1 class="cs-headline font-karla text-5xl md:text-6xl font-normal text-white leading-tight mb-6 opacity-0">
+              Designing Answers,<br />Not Just Charts
+            </h1>
+            <p class="cs-sub font-karla text-xl text-white/80 leading-relaxed opacity-0">
+              Helping investors understand what drives performance and compare investment opportunities.
+            </p>
+          </div>
+          <div class="cs-graph opacity-0">
+            <img
+              src="/case-studies/allianz/allianz-hero-graph.png"
+              alt="Allianz Fund Explorer graph"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Brief -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12">
+          <div data-animate>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">The Brief</p>
+            <h2 class="font-karla text-2xl font-medium text-gray-900 dark:text-white leading-snug">
+              Help investors make sense of fund performance
+            </h2>
+          </div>
+          <div data-animate>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              Allianz wanted to enhance its Fund Explorer platform. Investors could already reach the data through factsheets and reports — but feedback showed they struggled to understand why performance changed, and found comparing funds across documents painful.
+            </p>
+          </div>
+        </div>
+
+        <!-- Focus + Role cards -->
+        <div class="grid md:grid-cols-3 gap-6" data-animate>
+          <div class="border border-gray-100 dark:border-white/10 rounded-3xl p-6">
+            <p class="text-xs font-semibold text-[#3d6cb4] uppercase tracking-widest mb-3">Focus 01</p>
+            <p class="font-karla text-lg font-medium text-gray-900 dark:text-white leading-snug">
+              Help investors understand what is driving fund performance.
+            </p>
+          </div>
+          <div class="border border-gray-100 dark:border-white/10 rounded-3xl p-6">
+            <p class="text-xs font-semibold text-[#3d6cb4] uppercase tracking-widest mb-3">Focus 02</p>
+            <p class="font-karla text-lg font-medium text-gray-900 dark:text-white leading-snug">
+              Make it easier to compare funds side-by-side.
+            </p>
+          </div>
+          <div class="bg-[#2f3540] border border-[#2f3540] rounded-3xl p-6">
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">My Role</p>
+            <p class="font-karla text-lg font-medium text-white leading-snug">
+              Supporting the design lead — turning requirements into wireframes, prototypes and high-fidelity designs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Understanding the Problem -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12">
+          <div data-animate>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Understanding the Problem</p>
+            <h2 class="font-karla text-2xl font-medium text-gray-900 dark:text-white leading-snug">
+              Before designing, we learned how investors actually research funds
+            </h2>
+          </div>
+          <div data-animate>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              Our design lead ran the discovery research. I supported it — reviewing existing factsheets, competitor products and other financial-services examples, and sitting in on the sessions. Three questions came up again and again.
+            </p>
+          </div>
+        </div>
+
+        <!-- Research images -->
+        <div class="grid md:grid-cols-[2fr_1fr_1fr] gap-4" data-animate>
+          <img
+            src="/case-studies/allianz/allianz-research-1.jpg"
+            alt="Discovery research session"
+            class="w-full h-64 md:h-80 object-cover rounded-xl"
+          />
+          <img
+            src="/case-studies/allianz/allianz-research-2.jpg"
+            alt="Research workshop"
+            class="w-full h-64 md:h-80 object-cover rounded-xl"
+          />
+          <img
+            src="/case-studies/allianz/allianz-research-3.jpg"
+            alt="Affinity mapping"
+            class="w-full h-64 md:h-80 object-cover rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Opportunity Areas -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12">
+          <div data-animate>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Opportunity Areas</p>
+            <h2 class="font-karla text-2xl font-medium text-gray-900 dark:text-white leading-snug">
+              Where could we improve the experience?
+            </h2>
+          </div>
+          <div data-animate>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              Working with stakeholders and the design lead, we narrowed the brief to two clear opportunities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pain points + screenshot -->
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start mb-12" data-animate>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-5 rounded-2xl border border-gray-100 dark:border-white/10">
+              <span class="mt-1 w-2 h-2 rounded-full bg-[#3d6cb4] flex-shrink-0"></span>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Lack of performance insights for investors</p>
+            </div>
+            <div class="flex items-start gap-4 p-5 rounded-2xl border border-gray-100 dark:border-white/10">
+              <span class="mt-1 w-2 h-2 rounded-full bg-[#3d6cb4] flex-shrink-0"></span>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">No easy way to compare funds across the platform</p>
+            </div>
+            <div class="flex items-start gap-4 p-5 rounded-2xl border border-gray-100 dark:border-white/10">
+              <span class="mt-1 w-2 h-2 rounded-full bg-[#3d6cb4] flex-shrink-0"></span>
+              <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">How is the market affecting the fund</p>
+            </div>
+          </div>
+          <img
+            src="/case-studies/allianz/allianz-opportunity-screenshot.png"
+            alt="Existing fund explorer interface"
+            class="w-full rounded-xl border border-gray-100 dark:border-white/10 shadow-lg"
+          />
+        </div>
+
+        <!-- Opportunity cards -->
+        <div class="grid md:grid-cols-2 gap-6" data-animate>
+          <div class="border border-gray-100 dark:border-white/10 rounded-3xl p-6">
+            <p class="text-xs font-semibold text-[#3d6cb4] uppercase tracking-widest mb-3">Performance Insights</p>
+            <p class="font-karla text-lg font-medium text-gray-900 dark:text-white leading-snug">
+              Let users investigate what is driving performance — rather than simply viewing a chart.
+            </p>
+          </div>
+          <div class="border border-gray-100 dark:border-white/10 rounded-3xl p-6">
+            <p class="text-xs font-semibold text-[#3d6cb4] uppercase tracking-widest mb-3">Fund Comparison</p>
+            <p class="font-karla text-lg font-medium text-gray-900 dark:text-white leading-snug">
+              Let users compare multiple funds without downloading and cross-referencing multiple reports.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exploring Concepts -->
+    <div class="max-w-6xl mx-auto px-6 pb-32">
+      <div class="border-t border-gray-100 dark:border-white/5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          <div data-animate>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Exploring Concepts</p>
+            <h2 class="font-karla text-2xl font-medium text-gray-900 dark:text-white leading-snug">
+              Starting wide, on paper
+            </h2>
+          </div>
+          <div data-animate>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              I started with sketches and low-fidelity wireframes to explore ways of presenting a lot of information at once. The real question: how much do users need immediately, versus what can be revealed progressively?
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </Layout>
+
+<script>
+  function animateHero() {
+    const items = [
+      { sel: '.cs-back', delay: 100 },
+      { sel: '.cs-logo', delay: 250 },
+      { sel: '.cs-headline', delay: 400 },
+      { sel: '.cs-sub', delay: 550 },
+      { sel: '.cs-graph', delay: 400 },
+    ];
+
+    items.forEach(({ sel, delay }) => {
+      const el = document.querySelector(sel) as HTMLElement | null;
+      if (!el) return;
+      el.style.translate = '0 1.5rem';
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.22,1,0.36,1), translate 0.7s cubic-bezier(0.22,1,0.36,1)';
+        el.style.translate = '0 0';
+        el.style.opacity = '1';
+      }, delay);
+    });
+  }
+
+  animateHero();
+  document.addEventListener('astro:page-load', animateHero);
+</script>
