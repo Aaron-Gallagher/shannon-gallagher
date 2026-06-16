@@ -7,6 +7,8 @@ interface PersonalProjectMeta {
   accent: string;
   featured?: boolean;
   logo?: string;
+  order?: number;
+  hidden?: boolean;
 }
 
 const modules = import.meta.glob<{ personalProject?: PersonalProjectMeta }>('../pages/personal-projects/*.astro', { eager: true });
@@ -16,7 +18,9 @@ const projects = Object.entries(modules)
   .map(([path, mod]) => ({
     ...mod.personalProject,
     href: `/personal-projects/${path.split('/').pop()!.replace('.astro', '')}`,
-  }));
+  }))
+  .filter((project) => !project.hidden)
+  .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 ---
 
 <section id="personal-projects" class="py-32">
