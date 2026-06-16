@@ -87,7 +87,7 @@ html.dark body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, var(--color-brand-dark), transparent 60%);
+  background: linear-gradient(135deg, var(--card-accent, var(--color-brand-dark)), transparent 60%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -95,7 +95,7 @@ html.dark body {
 
 .glow-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px -10px rgba(124, 58, 237, 0.08);
+  box-shadow: 0 20px 60px -10px color-mix(in srgb, var(--card-accent, var(--color-brand-dark)) 12%, transparent);
 }
 
 .glow-card:hover::before {
@@ -103,7 +103,7 @@ html.dark body {
 }
 
 .dark .glow-card:hover {
-  box-shadow: 0 20px 60px -10px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 20px 60px -10px color-mix(in srgb, var(--card-accent, var(--color-brand-dark)) 22%, transparent);
 }
 
 .dark .glow-card:hover::before {
